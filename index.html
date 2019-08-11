@@ -1,0 +1,241 @@
+<!DOCTYPE="html">
+<html lang="en">
+<head>
+  <meta name="description" content="Cincinnati Web Developer">
+  <meta name="keywords" content="Cincinnati,Web Developer,HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Rob Frank">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trob Frank</title>
+  <link rel="stylesheet" href="src/bootstrap-reboot.css">
+  <link rel="stylesheet" href="src/bootstrap.css">
+  <link rel="stylesheet" href="src/style.css">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,400|IBM+Plex+Serif" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+</head>
+<body>
+	<header>
+		<nav class="nav nav-primary opacity-1">
+			<div class="container">
+				<div class="navigation col-12">
+					<a class="logo home" href="index.html"><div class="rf"></div></a>
+					<a data-view-id="1" class="anchNav anchNav-about about" href="#">About</a>
+					<a data-view-id="2" class="anchNav anchNav-work work" href="#">Work</a>
+					<a data-view-id="3" class="anchNav anchNav-contact contact"href="#">Contact</a>
+				</div><!--navigation-->
+			</div><!--container-->
+		</nav><!--nav-primary-->
+	</header>
+	<main class="main">
+		<div class="hero d-flex justify-content-center flex-column align-items-center shape-area">
+			<div class="hero-inner container">
+				<h2>Web Developer based in Cincinnati</h2>
+				<h3>HTML, CSS, JAVASCRIPT, PHP, SQL</h3>			
+			</div>
+			<a data-view-id="0" class="anchNav anchNav-social social active opacity-0 hidden" href="#">
+				<i class="fas fa-share-alt"></i>
+			</a>
+			<div class="hero-filter"></div>
+		</div>
+		<div class="page-content">
+			<div class="page-content-container nopadding">
+				<div id="scroll-to-me"></div>
+				<section data-view-id="1" class="content-section content-slide inactive opacity-0">
+					<div class="container first">
+						<div class="container-body d-flex flex-wrap">
+							<div class="content-bio col-12 col-md-7 scroll-transition">
+								<div class="name-selector-view"></div>
+								<h3>Hi, I’m Rob. Also known as <a class="anch-name-selector" href="#">Trob</a></h3>
+								<h4>I'm a developer & designer who is interested in making great things.</h4>		
+								<div class="col-12 d-block d-md-none image-container image-container-mobile scroll-transition">
+									<img class="content-img" src="images/trobfrank-cincinnati-portrait.jpg" alt="Rob Frank (trobfrank) - Cincinnati Web Developer"/>
+								</div>
+								<p>Since graduating from <a href="#">Electronic Media Production at CCM</a> (2014),
+								<span class="d-none d-lg-block clear"></span>
+								I have worked as a website analyst, a part-time freelancer, & a web designer/developer.</p>
+								<p>Outside of work I enjoy:</p>
+								<ul>
+								    <li>making music</li>
+								    <li>cooking</li>
+								    <li>ping pong</li>
+								    <li>nintendo</li>
+								    <li>hanging with my girlfriend <a href="#">(Claire)</a> & our two cats</li>
+								</ul>									
+							</div>
+							<div class="image-container image-container-bio image-container-fixed d-none d-md-block col-md-5 scroll-transition"></div>
+						</div><!--container-body-->
+					</div><!--container-->
+				</section>
+				<section data-view-id="2" class="content-section content-slide work inactive opacity-0">				
+					<div class="work-header ta-c">
+						<div class="container-body container d-flex align-items-center justify-content-end">
+							<div class="category-index">
+								<a href="#">Progressive Web Apps</a>|
+								<a href="#">Designs</a>|
+								<a href="#">Wordpress</a>|
+								<a href="#">Vue.js</a>|
+								<a href="#">Misc</a>
+							</div>
+						</div>
+					</div>	
+					<div class="clearfix"></div>	
+					<div class="page-content-divider bg-divider bg-divider-about">
+						<div class="shape-area absolute clearfix"></div>
+						<h3 class="header-content-divider scroll-transition">Progressive Web Apps</h3>
+					</div>				
+					<div class="clearfix"></div>	
+					<div class="container scroll-transition">
+						<div class="container-header ">
+							<h3>School District App</h3>
+							<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
+						</div>						
+						<div class="container-body scroll-transition">
+							<div class="image-container col-md-6 padding-left-15 float-right">
+								<img src="images/responsive.png"/>
+								<div class="image-after"></div>
+							</div>
+							<div class="content-container col-12 col-md-6 nopadding">
+								<h4>What is it?</h4>
+								<p>This was a project given to me after about 6 months of implementing responsive, and non-responsive websites. The goal was to find a way to showcase critical school information in an accessible, intuitive, and quick way.</p>
+								<p>We determined what information should be featured most prominently in the app model by using information gathered from Google Analytics on existing schools sites. Also, we incorporate each client’s preferences/needs for other content. </p>
+								<h4>How's it work?</h4>
+								<ul>
+									<li>Mobile traffic is redirected to a subdomain that uses the same database as the main desktop site, but formats the content in an entirely different way.</li>
+									<li>When first arriving on the mobile-only subdomain, users are asked to choose preferences for their schools. The chosen schools and the corresponding news pages are saved into a cookie and we are able to modify the content we load on each page based on those cookies.</li>
+									<li>This app model also features a manifest.json file, service workers for caching, and saving to home screen.</li>
+									<li>Technologies used: PHP, HTML, CSS (boostrap 3), JS, jQuery, MySQL</li>
+								</ul>
+								<h4>Who's using it?</h4>
+								<p>List of schools that use this technology:</p>
+								<ul>
+									<li>Lebanon</li>
+									<li>Franklin</li>
+									<li>Kings</li>
+									<li>Wilmington</li>
+									<li>Middletown</li>
+									<li>Milford</li>
+								</ul>
+							</div>
+						</div>														
+					</div>
+					<div class="shape-area clearfix"></div>
+					<div class="container noborder scroll-transition">
+						<h3>Athletics Department App</h3>
+						<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
+						<div class="image-container col-md-6 float-left">
+							<img src="images/responsive.png"/>
+							<div class="image-after"></div>
+						</div>
+						<h4>What?</h4>
+						<p>Similar to the app above but with more AJAX, this app loads content from the main site’s database.
+						Users are forwarded to the subdomain using a PHP Mobile Detect class
+						The design of this app was directly influenced by ESPN’s mobile app. Their information hierarchy was a great reference for how we could organize and design this app.</p>
+						<h4>How?</h4>
+						<p>
+						Similar to the school app, this model features a manifest.json and service worker file that prompt users to download to their home screen and cache the data for offline viewing. 
+						Technologies used: PHP, HTML, CSS (boostrap 3), JS, jQuery, MySQL</p>
+						<h4>Who?</h4>
+						<p>List of schools that use this technology:</p>
+						<ul>
+							<li>Oak Hills</li>
+							<li>Talawanda</li>
+							<li>Turpin Schools</li>
+						</ul>						
+					</div>					
+				</section>
+				<section data-view-id="3" class="content-section content-slide inactive opacity-0">
+					<div class="container first">
+						<div class="container-body">
+							<div class="row justify-content-center">
+								<div class="form-wrapper col-12 col-sm-9 col-lg-6 scroll-transition">
+									<div class="form-message"></div>
+									<form id="form-contact" class="col-12 nopadding">
+										<h3>Say Hi</h3>
+										<div class="contact-group col-12 nopadding">
+											<span class="sr-only">Name</span>
+											<input type="text" required />
+											<label class="input-label">Name</label>
+											<span class="input-after"><span>
+										</div>
+										<div class="contact-group col-12 nopadding">
+											<span class="sr-only">Email</span>	
+											<input type="email" required />
+											<label class="input-label">Email</label>
+											<span class="input-after"><span>
+										</div>
+										<div class="contact-group col-12 nopadding">
+											<span class="sr-only">Subject</span>									
+											<input type="text" required />
+											<label class="input-label">Subject</label>
+											<span class="input-after"><span>
+										</div>		
+										<div class="contact-group col-12 nopadding">
+											<span class="sr-only">Message</span>													
+											<textarea type="text" required></textarea>
+											<label class="input-label">Message</label>
+											<span class="input-after"><span>
+										</div>	
+										<div class="contact-group col-12 ta-l">
+											<input type="submit" value="Send">		
+										</div>	
+										<div class="form-loader"></div>				
+									</form>
+								</div><!--form-wrapper-->
+							</div><!--row-->
+						</div><!--container-body-->
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="d-flex flex-wrap content-section-links nopadding noborder">
+			<div class="col-12 col-sm-4 box box-double box-text bg-red">
+				<i class="icon fas fa-code"></i>
+				<p class="ta-c">SASS, Bootstrap, jQuery, Vue.js, Wordpress, PWAs.<br>Read more about my experience <a href="#">here</a>.</p>
+			</div>
+			<div class="col-12 col-sm-8 bg-black box-double flex-wrap d-flex nopadding">
+				<div class="col-12 box bg-black flex-row justify-content-around">
+					<div class="social-link-holder nopadding col-3 ta-r">
+						<a class="social-link" href="#"><i class="icon fab fa-codepen"></i></a>
+					</div>
+					<div class="social-link-holder nopadding col-5 ta-c">
+						<a class="social-link" href="#"><i class="icon fab fa-stack-overflow"></i></a>
+					</div>					
+					<div class="social-link-holder nopadding col-3 ta-l">
+						<a class="social-link" href="#"><i class="icon fab fa-github"></i></a>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 box box-text bg-purple">
+					<i class="icon fas fa-file-alt"></i>
+					<p>download resume</p>
+				</div>
+				<div class="col-12 col-sm-6 box bg-orange flex-row justify-content-around">
+					<div class="social-link-holder nopadding col-12 ta-c">
+						<a class="social-link" href="#"><i class="icon fab fa-soundcloud"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-8 box bg-blue flex-row justify-content-around">
+				<div class="social-link-holder nopadding col-3 ta-r">
+					<a class="social-link" href="#"><i class="icon fab fa-twitter-square"></i></a>
+				</div>
+				<div class="social-link-holder nopadding col-5 ta-c">
+					<a class="social-link" href="#"><i class="icon fab fa-facebook-square"></i></a>
+				</div>					
+				<div class="social-link-holder nopadding col-3 ta-l">
+					<a class="social-link" href="#"><i class="icon fab fa-instagram"></i></a>
+				</div>
+			</div>
+			<div class="col-12 col-sm-4 box bg-lightorange flex-row justify-content-around">
+				<div class="social-link-holder nopadding col-12 ta-c">
+					<a class="social-link" href="#"><i class="icon fas fa-paper-plane"></i></a>
+				</div>
+			</div>
+		</div>	
+	</footer>
+<script src="src/app.js"></script>
+</body>
+</html>

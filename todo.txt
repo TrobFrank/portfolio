@@ -1,0 +1,30 @@
+todo.txt
+
+general:
+1. htacces to make clean url
+2. add preloader before any content shown
+3. add google analytics
+4. mobile menu/interactions
+
+social:
+1. add links
+2. maybe recolor boxes to something more simple? 
+3. potentially add a gooey/interactive social link that expands into all the social media?
+
+about:
+1. get real photo
+2. add name picker, fun animation when clicked?
+3. update links
+
+work:
+1. figure out side menu
+2. layout the actual content
+	- gather photos from all mentioned projects
+	- find matching photos/background for fixed background sections
+
+
+contact:
+[x] 1. style submit button
+2. submit to asynchronous script that sends mail to me + recipient
+	- ajax post to php script that sends from inputs
+3. add reCAPTCHA
