@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="src/style.css">
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,400|IBM+Plex+Serif" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="src/vendor/slick.css"/>
+<link rel="stylesheet" type="text/css" href="src/vendor/slick-theme.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-
+<script type="text/javascript" src="src/vendor/slick.min.js"></script>
 </head>
 <body>
 	<header>
@@ -32,7 +33,7 @@
 		<div class="hero d-flex justify-content-center flex-column align-items-center shape-area">
 			<div class="hero-inner container">
 				<h2>Web Developer based in Cincinnati</h2>
-				<h3>HTML, CSS, JAVASCRIPT, PHP, SQL</h3>			
+				<h3>HTML, CSS, JAVASCRIPT, PHP, SQL, & More</h3>			
 			</div>
 			<a data-view-id="0" class="anchNav anchNav-social social active opacity-0 hidden" href="#">
 				<i class="fas fa-share-alt"></i>
@@ -47,10 +48,15 @@
 						<div class="container-body d-flex flex-wrap">
 							<div class="content-bio col-12 col-md-7 scroll-transition">
 								<div class="name-selector-view"></div>
-								<h3>Hi, I’m Rob. Also known as <a class="anch-name-selector" href="#">Trob</a></h3>
-								<h4>I'm a developer & designer who is interested in making great things.</h4>		
+								<h3>Hi, I’m Rob.</h3>
+								<h4>Also known as 
+									<a class="anch-name-selector d-none d-lg-inline" href="#">Trob</a>
+									<span class="d-inline d-lg-none">Trob</span>
+									<span class="dot">.</span>
+								</h4>	
+								<h4 class="pr-3">I'm a developer & designer interested in making great products.</h4>		
 								<div class="col-12 d-block d-md-none image-container image-container-mobile scroll-transition">
-									<img class="content-img" src="images/trobfrank-cincinnati-portrait.jpg" alt="Rob Frank (trobfrank) - Cincinnati Web Developer"/>
+									<img class="content-img" src="images/content/trobfrank-cincinnati-portrait.jpg" alt="Rob Frank (trobfrank) - Cincinnati Web Developer"/>
 								</div>
 								<p>Since graduating from <a href="#">Electronic Media Production at CCM</a> (2014),
 								<span class="d-none d-lg-block clear"></span>
@@ -59,9 +65,8 @@
 								<ul>
 								    <li>making music</li>
 								    <li>cooking</li>
-								    <li>ping pong</li>
-								    <li>nintendo</li>
-								    <li>hanging with my girlfriend <a href="#">(Claire)</a> & our two cats</li>
+								    <li>nintendo / dance dance revolution / ping pong</li>
+								    <li>hanging with my wife <a href="#">(Claire)</a> & our two cats</li>
 								</ul>									
 							</div>
 							<div class="image-container image-container-bio image-container-fixed d-none d-md-block col-md-5 scroll-transition"></div>
@@ -72,11 +77,9 @@
 					<div class="work-header ta-c">
 						<div class="container-body container d-flex align-items-center justify-content-end">
 							<div class="category-index">
-								<a href="#">Progressive Web Apps</a>|
-								<a href="#">Designs</a>|
-								<a href="#">Wordpress</a>|
-								<a href="#">Vue.js</a>|
-								<a href="#">Misc</a>
+								<a href="#">Products</a>|	<!-- school app, athletics app, 5.5 model, responsive ecomm, lesser bilby -->
+								<a href="#">Wordpress</a>| 	<!-- wpy, clifton business association, brooch and bangle -->
+								<a href="#">Misc. Design</a> <!-- content from current website (graphics), low poly projects, anything PS or AI -->
 							</div>
 						</div>
 					</div>	
@@ -87,63 +90,246 @@
 					</div>				
 					<div class="clearfix"></div>	
 					<div class="container scroll-transition">
-						<div class="container-header ">
-							<h3>School District App</h3>
+						<div class="container-header">
+							<h3>School District Web App</h3>
 							<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
-						</div>						
+						</div><!--container-header-->					
 						<div class="container-body scroll-transition">
-							<div class="image-container col-md-6 padding-left-15 float-right">
-								<img src="images/responsive.png"/>
+							<div class="image-container col-md-4 padding-left-15 float-right">
+								<img class="d-block" src="images/content/lebanon-screenshot.png"/>
+								<!-- <img class="d-none d-xl-block" src="images/content/lebanon.gif"/> -->
 								<div class="image-after"></div>
-							</div>
-							<div class="content-container col-12 col-md-6 nopadding">
+							</div><!--image-container-->
+							<div class="content-container d-block nopadding">
 								<h4>What is it?</h4>
-								<p>This was a project given to me after about 6 months of implementing responsive, and non-responsive websites. The goal was to find a way to showcase critical school information in an accessible, intuitive, and quick way.</p>
-								<p>We determined what information should be featured most prominently in the app model by using information gathered from Google Analytics on existing schools sites. Also, we incorporate each client’s preferences/needs for other content. </p>
-								<h4>How's it work?</h4>
+								<p>I was tasked to find a way to showcase critical school information in an accessible and intuitive mobile format. I achieved this by using the main site's database and formatting the content to be responsive. The team worked together to determine what information should be featured most prominently in the app model by using information gathered from Google Analytics on existing schools sites.</p>
+								<h4>How does it work?</h4>
 								<ul>
-									<li>Mobile traffic is redirected to a subdomain that uses the same database as the main desktop site, but formats the content in an entirely different way.</li>
+									<li>Mobile traffic is redirected to a subdomain that uses the same database as the main desktop site.</li>
 									<li>When first arriving on the mobile-only subdomain, users are asked to choose preferences for their schools. The chosen schools and the corresponding news pages are saved into a cookie and we are able to modify the content we load on each page based on those cookies.</li>
-									<li>This app model also features a manifest.json file, service workers for caching, and saving to home screen.</li>
-									<li>Technologies used: PHP, HTML, CSS (boostrap 3), JS, jQuery, MySQL</li>
+									<li>This web app model also features a manifest.json file, service workers for caching, and saving to home screen.</li>
+									<li>Technologies used: HTML, CSS, Bootstrap 3, PHP, JS, jQuery, MySQL</li>
 								</ul>
-								<h4>Who's using it?</h4>
-								<p>List of schools that use this technology:</p>
-								<ul>
-									<li>Lebanon</li>
-									<li>Franklin</li>
-									<li>Kings</li>
-									<li>Wilmington</li>
-									<li>Middletown</li>
-									<li>Milford</li>
-								</ul>
-							</div>
-						</div>														
-					</div>
+							<h4>Who's using it?</h4>
+							</div><!--content-container-->
+							<div class="col-12 col-md-12 col-lg-8 slick-slider-wrapper">
+								<div class="slick-slider">
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/franklin.png" alt="Franklin" />
+										</div>
+									</div>
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/kings.png" alt="Kings" />
+										</div>
+									</div>
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/lebanon.png" alt="Lebanon" />
+										</div>
+									</div>		
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/littlemiami.png" alt="Little Miami" />
+										</div>
+									</div>		
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/middletown.png" alt="Middletown" />
+										</div>
+									</div>	
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/milford.png" alt="Milford" />
+										</div>
+									</div>	
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/wayne.png" alt="Wayne Local" />
+										</div>
+									</div>
+									<div class="slider-outer">
+										<div class="slider-inner d-flex justify-content-center align-items-center">
+											<img src="images/schools/wilmington.png" alt="Wilmington" />
+										</div>
+									</div>										
+								</div><!--slick-slider-->
+							</div><!--slick-slider-wrapper-->						
+						</div><!--container-body-->													
+					</div><!--container-->
 					<div class="shape-area clearfix"></div>
-					<div class="container noborder scroll-transition">
-						<h3>Athletics Department App</h3>
-						<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
-						<div class="image-container col-md-6 float-left">
-							<img src="images/responsive.png"/>
+					<div class="container container-body pt-0 noborder scroll-transition">
+						<div class="container-header">
+							<h3>Athletics Department Web App</h3>
+							<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
+						</div><!--container-header-->	
+						<div class="image-container col-md-4 float-left mb-0">
+							<img src="images/content/milford-screenshot.png"/>
 							<div class="image-after"></div>
 						</div>
-						<h4>What?</h4>
-						<p>Similar to the app above but with more AJAX, this app loads content from the main site’s database.
-						Users are forwarded to the subdomain using a PHP Mobile Detect class
-						The design of this app was directly influenced by ESPN’s mobile app. Their information hierarchy was a great reference for how we could organize and design this app.</p>
-						<h4>How?</h4>
-						<p>
-						Similar to the school app, this model features a manifest.json and service worker file that prompt users to download to their home screen and cache the data for offline viewing. 
-						Technologies used: PHP, HTML, CSS (boostrap 3), JS, jQuery, MySQL</p>
-						<h4>Who?</h4>
-						<p>List of schools that use this technology:</p>
-						<ul>
-							<li>Oak Hills</li>
-							<li>Talawanda</li>
-							<li>Turpin Schools</li>
-						</ul>						
-					</div>					
+						<div class="container-body p-0 col-md-8 float-right">
+							<h4>What is it?</h4>
+							<p>School athletics departments use a different CMS than the schools. Similar to the schools above, I was tasked to find a way to showcase critical information in a mobile format regarding school sports. The design of this app was directly influenced by the industry leader's mobile app (ESPN).</p>
+							<h4>How does it work?</h4>
+							<ul>
+								<li>Similar to the school app above above but with more asynchronous features, this app loads content from the main site’s database. Users are forwarded to the subdomain using a PHP Mobile Detect class.</li>
+								<li>This model features a manifest.json and service worker file that prompt users to download to their home screen and cache the data for (limited) offline viewing.</li>
+								<li>Technologies used: HTML, CSS, Bootstrap 3, PHP, JS, jQuery, MySQL</li>
+							</ul>		
+							<h4>Who's using it?</h4>
+							<div class="clearfix"></div>
+						</div><!--container-body-->	
+						<div class="col-12 col-md-12 col-lg-8 float-right slick-slider-wrapper p-0">
+							<div class="slick-slider">
+								<div class="slider-outer">
+									<div class="slider-inner d-flex justify-content-center align-items-center">
+										<img src="images/athletics/goturpin.png" alt="Turpin Athletics" />
+									</div>
+								</div>
+								<div class="slider-outer">
+									<div class="slider-inner d-flex justify-content-center align-items-center">
+										<img src="images/athletics/milford.png" alt="Milford Athletics" />
+									</div>
+								</div>
+								<div class="slider-outer">
+									<div class="slider-inner d-flex justify-content-center align-items-center">
+										<img src="images/athletics/oakhills.png" alt="Oak Hills Athletics" />
+									</div>
+								</div>		
+								<div class="slider-outer">
+									<div class="slider-inner d-flex justify-content-center align-items-center">
+										<img src="images/athletics/talawanda.png" alt="Talawanda Athletics" />
+									</div>
+								</div>												
+							</div><!--slick-slider-->
+						</div><!--slick-slider-wrapper-->
+						<div class="clearfix"></div>
+					</div><!--container-->				
+					<div class="clearfix"></div>	
+					<div class="page-content-divider bg-divider bg-divider-about">
+						<div class="shape-area absolute clearfix"></div>
+						<h3 class="header-content-divider scroll-transition blue">CMS Updates</h3>
+					</div>				
+					<div class="clearfix"></div>	
+					<div class="container scroll-transition">
+						<div class="container-header">
+							<h3>Responsive Ecommerce</h3>
+							<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
+						</div><!--container-header-->					
+						<div class="container-body scroll-transition">
+							<div class="image-container col-12 col-lg-4 padding-left-15 float-right image-translate">
+								<img class="d-block" src="images/content/ecommerce-screenshot.png"/>
+								<!-- <img class="d-none d-xl-block" src="images/content/lebanon.gif"/> -->
+								<div class="image-after"></div>
+							</div><!--image-container-->
+							<div class="content-container col-12 col-lg-8 d-block nopadding">
+								<h4>What was my role?</h4>
+								<p>This ecommerce module was originally developed within a non-responsive front end. In 2018, I was tasked to take all of the existing functionality and make it responsive. By doing research on what top ecommerce companies were doing, I was able to create an intuitive, modern, and familiar ecommerce experience.</p>
+								<h4>Updated Features Include:</h4>
+								<ul>
+									<li>Fully responsive cart & checkout</li>
+									<li>Option to display items in a "table" that turns into mobile friendly layout on mobile devices</li>
+									<li>Breadcrumbs and SEO updates</li>
+									<li>Pulls setup data from main website (if installed on subdomain) and removes implementation redundancy</li>
+								</ul>
+							</div><!--content-container-->					
+						</div><!--container-body-->													
+					</div><!--container-->
+					<div class="shape-area clearfix"></div>	
+					<div class="container scroll-transition">
+						<div class="container-header">
+							<h3>Lesser Bilby</h3>
+							<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
+						</div><!--container-header-->					
+						<div class="container-body scroll-transition row m-0">
+							<div class="code-container col-12 col-lg-6 pl-0">
+								<pre class="pre-scrollable">
+									<code>
+// 88                                                       88          88 88 88     
+// 88                                                       88          "" 88 88  
+// 88                                                       88             88 88 
+// 88  ,adPPYba, ,adPPYba, ,adPPYba,  ,adPPYba, 8b,dPPYba,  88,dPPYba,  88 88 88,dPPYba,  8b       d8 
+// 88 a8P_____88 I8[    "" I8[    "" a8P_____88 88P'   "Y8  88P'    "8a 88 88 88P'    "8a `8b     d8' 
+// 88 8PP"""""""  `"Y8ba,   `"Y8ba,  8PP""""""" 88          88       d8 88 88 88       d8  `8b   d8'
+// 88 "8b,   ,aa aa    ]8I aa    ]8I "8b,   ,aa 88          88b,   ,a8" 88 88 88b,   ,a8"   `8b,d8' 
+// 88  `"Ybbd8"' `"YbbdP"' `"YbbdP"'  `"Ybbd8"' 88          8Y"Ybbd8"'  88 88 8Y"Ybbd8"'      Y88' 
+//                                                                                            d8' 
+//                                                                                           d8'
+//       /)  / )          ____ 															   	
+//      // // /    ___--""    "-.		//never forget										
+//  \ |,"( /`--""              `.    
+//   \/ o                        \					//too soon
+//   (   _.-.              ,'"    ;  
+//    |\"   /`. \  ,      /       |			//extinct boi
+//    | \  ' .'`.; |      |       \.______________________________
+//      _-'.'    | |--..,,,\_    \________------------""""""""""""
+//     ,,''"   _-'.'       ___"-   )
+//           ,,'"        ,,'''---~"
+//
+									</code>
+								</pre>
+							</div><!--image-container-->
+							<div class="content-container col-12 col-lg-6">
+								<h4>What was my role?</h4>
+								<p>This is a CSS template that I designed based off of commonly edited classes within our CMS. The goal of creating this was to streamline the implementation process to save as much time as possible. This template has been an evolving project, always getting enhanced and modified to become more useful.</p>
+								<h4>Features Include:</h4>
+								<ul>
+									<li>Prewritten classes commonly modified per implmentation</li>
+									<li>Prewritten responsive break points</li>
+									<li>Utility classes and variables such as <samp>$transition;</samp> creating a browser compliant set of CSS attributes</li>
+									<li>Faster ramp up time for new employees</li>
+								</ul>
+							</div><!--content-container-->					
+						</div><!--container-body-->													
+					</div><!--container-->					
+					<div class="clearfix"></div>	
+					<div class="page-content-divider bg-divider bg-divider-about">
+						<div class="shape-area absolute clearfix"></div>
+						<h3 class="header-content-divider scroll-transition red">Wordpress Showcase</h3>
+					</div>			
+					<div class="row m-0">				
+						<div class="carded-feature col-12 col-md-6 col-lg-4 scroll-transition">
+							<div class="carded-feature-inner">
+								<a href="#"> 
+									<div class="carded-feature--image">
+										<img src="images/content/wordpress_broochandbangle.png" alt="Wordpress Sites - Brooch and Bangle" />
+									</div>
+									<div class="carded-feature--tagline">
+										<p class="tagline-subheader"></p>
+										<h5 class="tagline-header">Tagline<h5>
+									</div>
+								</a>
+							</div>	
+						</div>
+						<div class="carded-feature col-12 col-md-6 col-lg-4 scroll-transition">
+							<div class="carded-feature-inner">
+								<a href="#"> 
+									<div class="carded-feature--image">
+										<img src="images/content/wordpress_broochandbangle.png" alt="Wordpress Sites - Brooch and Bangle" />
+									</div>
+									<div class="carded-feature--tagline">
+										<p class="tagline-subheader"></p>
+										<h5 class="tagline-header">Tagline<h5>
+									</div>
+								</a>
+							</div>	
+						</div>
+						<div class="carded-feature col-12 col-md-6 col-lg-4 scroll-transition">
+							<div class="carded-feature-inner">
+								<a href="#"> 
+									<div class="carded-feature--image">
+										<img src="images/content/wordpress_broochandbangle.png" alt="Wordpress Sites - Brooch and Bangle" />
+									</div>
+									<div class="carded-feature--tagline">
+										<p class="tagline-subheader"></p>
+										<h5 class="tagline-header">Tagline<h5>
+									</div>
+								</a>
+							</div>	
+						</div>												
+					</div><!--container-->							
+					<div class="clearfix"></div>										
 				</section>
 				<section data-view-id="3" class="content-section content-slide inactive opacity-0">
 					<div class="container first">
@@ -192,9 +378,9 @@
 	</main>
 	<footer>
 		<div class="d-flex flex-wrap content-section-links nopadding noborder">
-			<div class="col-12 col-sm-4 box box-double box-text bg-red">
+			<div class="d-none d-md-flex col-12 col-sm-4 box box-double box-text bg-red">
 				<i class="icon fas fa-code"></i>
-				<p class="ta-c">SASS, Bootstrap, jQuery, Vue.js, Wordpress, PWAs.<br>Read more about my experience <a href="#">here</a>.</p>
+				<p class="ta-c">SASS, Bootstrap, jQuery, Wordpress, PWAs.<br>Read more about my experience <a href="#">here</a>.</p>
 			</div>
 			<div class="col-12 col-sm-8 bg-black box-double flex-wrap d-flex nopadding">
 				<div class="col-12 box bg-black flex-row justify-content-around">

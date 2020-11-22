@@ -65,6 +65,21 @@ h1,h2,h3,h4,h5,h6 {
 p,a,table,th,tr,td {
 
 }
+code,
+pre {
+    background:$purple;
+    color:$truewhite;
+}
+
+pre.pre-scrollable {
+    max-height:500px;
+
+}
+
+h4 .dot {
+  display:inline-block;
+  margin-left:-7.5px;  
+}
 
 .scroll-transition {
     position:relative;
@@ -355,7 +370,14 @@ main {
             z-index: -2;
         }
 
+        &.blue:after {
+            background: $blue;
+        }
+        &.red:after {
+            background: $red;
+        }
     }
+
     .container {
         position:relative;
     }
@@ -460,10 +482,17 @@ main {
         line-heigh:1;
         margin-bottom:7.5px;
     }
+    + .container-body {
+        clear:both;
+        padding-top:0;
+    }
 }
 
 .container-body {
     padding:45px;
+    .image-container {
+        margin-top:-50px;
+    }
 }
 
 /* //work */
@@ -474,6 +503,8 @@ main {
     .container-body {
         padding:0 45px;
         height:100%;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
     }
 }
 
@@ -517,9 +548,9 @@ main {
     position:relative;
     z-index:1;
     img {
-        max-width:100%;
+        max-width:85%;
         width:auto;
-
+        margin:auto;
     }
     &.shadow img {
         @include boxshadow(10px, 0.5);
@@ -536,20 +567,22 @@ main {
     }
     &.float-right {
         padding:0;
-        margin:0 -30px 55px 30px;
+        padding-left:15px;
+        margin:-55px -30px 55px 30px;
         .image-after {
             left:50px;
-            top:30px;
+            top:0;
             -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
             clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);        
         }
     }
     &.float-left {
         padding:0;
+        padding-right:15px;
         margin:0 30px 55px -30px;
         .image-after {
             right:50px;
-            top:30px;
+            top:0;
             -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
             clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);        
         }    
@@ -558,7 +591,7 @@ main {
 
 
 .image-container-bio {
-    background-image:url(../images/trobfrank-cincinnati-portrait.jpg)
+    background-image:url(../images/content/trobfrank-cincinnati-portrait.jpg)
 }
 
 .name-selector-view {
@@ -605,9 +638,9 @@ main {
         padding:0;
         padding-top:25px;
         position:absolute;
-        right: -66%;
+        right: -75%;
         height: auto;  
-        max-width:75%; 
+        max-width:80%; 
         display:flex;
         align-content:space-between;
         justify-content:space-between;
@@ -851,29 +884,37 @@ $shapeWidth: 40px;
     text-align:center;
     z-index:100;
     transition:all .05s linear;
-}
 
-.hero-inner > * {
-    color:$truewhite;
-}
+    > * {
+        display:inline-block;
+        min-width:240px;
+        color:$black;
+        padding:15px;
+    }
 
-.hero-inner h1 {
-    font-size:50px;
-	color:$black;
-}
+    h1 {
+        font-size:50px;
+        color:$black;
+        background:$truewhite;
+    }
 
-.hero-inner h2 {
-    font-size:50px;
-	color:$black;
-}
+    h2 {
+        font-size:50px;
+        color:$black;
+        background:$truewhite;
+    }
 
-.hero-inner h3 {
-    font-size:32px;
-    color:$black;
-}
+    h3 {
+        font-size:32px;
+        color:$black;
+        background:$truewhite;
+    } 
 
-.hero-inner p {
-	color:$truewhite;
+    p {
+        color:$black;
+        background:$truewhite;
+    }       
+
 }
 
 .hero + .page-content,
@@ -989,6 +1030,28 @@ button {
     outline: none;
 }
 
+/* //slick */
+
+.slick-slider {
+    height:150px;
+    .slick-prev:before,
+    .slick-next:before {
+        color:$black;
+    }
+
+    .slider-inner {
+        height:100%;
+    }
+
+    img {
+        height:auto;
+        width:auto;
+        max-width:125px;
+        max-height:100%;
+    }
+}
+
+
 /* //navigation //header //resize //vars */
 
 $navheight:60px;
@@ -1036,4 +1099,102 @@ $logoInt: 8px;
     $logoInt*3.25 $logoInt*-2 $black,
     $logoInt*3 $logoInt*-1 $red,
     $logoInt*3.25 $logoInt*-1 $black    
+}
+
+@media (min-width:1280px) {
+    .name-selector-view.open {
+        right:-75%;
+        max-width:75%;
+    }
+}
+
+
+@media (min-width:1200px) {
+
+    .image-container {
+        &.float-right {
+            margin:-55px -55px 55px 30px;
+        }
+        &.float-left {
+            margin:0px 30px 55px -55px;
+        }
+        &.image-translate {
+            position:absolute;
+            right:30px;
+            top:50%;
+            transform:translateY(-50%);
+            margin-top:-80px;
+        }
+    }
+
+}
+
+@media (min-width:1024px) and (max-width:1199px) {
+    
+}
+
+
+@media (min-width:768px) and (max-width:1023px) {
+    
+}
+
+@media (min-width:568px) and (max-width:767px) {
+    
+}
+
+@media (max-width:567px) {
+
+    .nav-primary .navigation {
+        padding:0;
+    }
+
+    .nav-primary .anchNav {
+        width:70px;
+    }
+
+    .container-header,
+    .container-body {
+        padding:30px 15px
+    }
+
+    .content-bio {
+        padding:0;  
+    }
+
+    .hero-inner {
+        h2 {
+            font-size:36px;
+        }
+        h3 {
+            font-size:24px;
+        }
+    }
+
+    .content-bio {
+        margin-top:0;
+        h3 {
+            text-align:center;
+            font-size:24px;
+            margin-top:10px;
+        }
+        h4 {
+            text-align:center;
+            font-size:21px;
+            margin-bottom:30px;
+        }
+    }
+
+    .image-container-mobile {
+        clear:both;
+    }
+
+    .work-header {
+        .container-body {
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+
+
+
 }

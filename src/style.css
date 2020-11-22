@@ -16,6 +16,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IBM Plex Serif", serif;
 }
 
+code,
+pre {
+  background: #280014;
+  color: white;
+}
+
+pre.pre-scrollable {
+  max-height: 500px;
+}
+
+h4 .dot {
+  display: inline-block;
+  margin-left: -7.5px;
+}
+
 .scroll-transition {
   position: relative;
   top: 8px;
@@ -315,6 +330,12 @@ main {
   opacity: 0.8;
   z-index: -2;
 }
+.bg-divider h3.blue:after {
+  background: #00263a;
+}
+.bg-divider h3.red:after {
+  background: #751818;
+}
 .bg-divider .container {
   position: relative;
 }
@@ -420,9 +441,16 @@ main {
   line-heigh: 1;
   margin-bottom: 7.5px;
 }
+.container-header + .container-body {
+  clear: both;
+  padding-top: 0;
+}
 
 .container-body {
   padding: 45px;
+}
+.container-body .image-container {
+  margin-top: -50px;
 }
 
 /* //work */
@@ -433,6 +461,8 @@ main {
 .work-header .container-body {
   padding: 0 45px;
   height: 100%;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .category-index a {
@@ -476,8 +506,9 @@ main {
   z-index: 1;
 }
 .image-container img {
-  max-width: 100%;
+  max-width: 85%;
   width: auto;
+  margin: auto;
 }
 .image-container.shadow img {
   -webkit-box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.5);
@@ -494,27 +525,29 @@ main {
 }
 .image-container.float-right {
   padding: 0;
-  margin: 0 -30px 55px 30px;
+  padding-left: 15px;
+  margin: -55px -30px 55px 30px;
 }
 .image-container.float-right .image-after {
   left: 50px;
-  top: 30px;
+  top: 0;
   -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .image-container.float-left {
   padding: 0;
+  padding-right: 15px;
   margin: 0 30px 55px -30px;
 }
 .image-container.float-left .image-after {
   right: 50px;
-  top: 30px;
+  top: 0;
   -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
   clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
 }
 
 .image-container-bio {
-  background-image: url(../images/trobfrank-cincinnati-portrait.jpg);
+  background-image: url(../images/content/trobfrank-cincinnati-portrait.jpg);
 }
 
 .name-selector-view {
@@ -574,9 +607,9 @@ main {
   padding: 0;
   padding-top: 25px;
   position: absolute;
-  right: -66%;
+  right: -75%;
   height: auto;
-  max-width: 75%;
+  max-width: 80%;
   display: flex;
   align-content: space-between;
   justify-content: space-between;
@@ -814,27 +847,27 @@ footer {
 }
 
 .shape-area > span:nth-child(1) {
-  transform: rotate(180deg);
+  transform: rotate(103deg);
 }
 
 .shape-area > span:nth-child(2) {
-  transform: rotate(68deg);
+  transform: rotate(74deg);
 }
 
 .shape-area > span:nth-child(3) {
-  transform: rotate(10deg);
-}
-
-.shape-area > span:nth-child(4) {
-  transform: rotate(246deg);
-}
-
-.shape-area > span:nth-child(5) {
   transform: rotate(185deg);
 }
 
+.shape-area > span:nth-child(4) {
+  transform: rotate(137deg);
+}
+
+.shape-area > span:nth-child(5) {
+  transform: rotate(63deg);
+}
+
 .shape-area > span:nth-child(6) {
-  transform: rotate(267deg);
+  transform: rotate(13deg);
 }
 
 .shape-area > span.triangle,
@@ -883,28 +916,30 @@ footer {
   z-index: 100;
   transition: all 0.05s linear;
 }
-
 .hero-inner > * {
-  color: white;
+  display: inline-block;
+  min-width: 240px;
+  color: #13000a;
+  padding: 15px;
 }
-
 .hero-inner h1 {
   font-size: 50px;
   color: #13000a;
+  background: white;
 }
-
 .hero-inner h2 {
   font-size: 50px;
   color: #13000a;
+  background: white;
 }
-
 .hero-inner h3 {
   font-size: 32px;
   color: #13000a;
+  background: white;
 }
-
 .hero-inner p {
-  color: white;
+  color: #13000a;
+  background: white;
 }
 
 .hero + .page-content,
@@ -1026,6 +1061,24 @@ button {
   outline: none;
 }
 
+/* //slick */
+.slick-slider {
+  height: 150px;
+}
+.slick-slider .slick-prev:before,
+.slick-slider .slick-next:before {
+  color: #13000a;
+}
+.slick-slider .slider-inner {
+  height: 100%;
+}
+.slick-slider img {
+  height: auto;
+  width: auto;
+  max-width: 125px;
+  max-height: 100%;
+}
+
 /* //navigation //header //resize //vars */
 .content-section-links {
   height: 100%;
@@ -1047,6 +1100,76 @@ button {
   height: 8px;
   top: 52px;
   box-shadow: 0px -8px #ad2121, 2px -8px #751818, 0px -16px #ad2121, 2px -16px #751818, 0px -24px #ad2121, 0px -32px #ad2121, 2px -32px #751818, 0px -40px #ad2121, 8px -40px #ad2121, 16px -40px #ad2121, 18px -40px #13000a, 24px -32px #751818, 26px -32px #13000a, 16px -24px #751818, 18px -24px #13000a, 8px -24px #ad2121, 24px -16px #751818, 26px -16px #13000a, 24px -8px #751818, 26px -8px #13000a;
+}
+
+@media (min-width: 1280px) {
+  .name-selector-view.open {
+    right: -75%;
+    max-width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .image-container.float-right {
+    margin: -55px -55px 55px 30px;
+  }
+  .image-container.float-left {
+    margin: 0px 30px 55px -55px;
+  }
+  .image-container.image-translate {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -80px;
+  }
+}
+@media (max-width: 567px) {
+  .nav-primary .navigation {
+    padding: 0;
+  }
+
+  .nav-primary .anchNav {
+    width: 70px;
+  }
+
+  .container-header,
+.container-body {
+    padding: 30px 15px;
+  }
+
+  .content-bio {
+    padding: 0;
+  }
+
+  .hero-inner h2 {
+    font-size: 36px;
+  }
+  .hero-inner h3 {
+    font-size: 24px;
+  }
+
+  .content-bio {
+    margin-top: 0;
+  }
+  .content-bio h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .content-bio h4 {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+  }
+
+  .image-container-mobile {
+    clear: both;
+  }
+
+  .work-header .container-body {
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

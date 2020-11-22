@@ -134,6 +134,7 @@ $formItems.forEach(function($formItem){
 		}
 	});
 });
+
 /* Ajax posting to form with jQuery because it's easier :) */
 $(document).ready(function(){
 	$form.addEventListener('submit',function(event){
@@ -160,6 +161,44 @@ $(document).ready(function(){
 		}
 
 	});//submit
+
+	//also using https://kenwheeler.github.io/slick/
+	$('.slick-slider').each(function(){
+		$(this).slick({
+		  dots: true,
+		  arrows: true,
+		  infinite: false,
+		  speed: 300,
+		  slidesToShow: 4,
+		  slidesToScroll: 4,
+		  infinite: true,
+		  responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		  ]
+		});
+	})
+
+
 });//jquery
 
 /* Tabbing through sections */
@@ -186,15 +225,18 @@ $mainNavLinks.forEach(function($navItem){
 				span.style.opacity = '0';
 			});
 			setTimeout(function(e){
-				createNewShapes();
+				createNewShapes();				
 			},280);
-			// if (!$navItem.classList.contains('work')) {
-			// 	var $thisViewOffset = offset($thisView);
-			// 	window.scroll({
-			// 		top: $thisViewOffset.top - $10vh/2.5,
-			// 		behavior:'smooth'
-			// 	});
-			// }
+
+			var $scrollToPosition	= 0;
+			// if ($wh[0] >= 768) {
+			// 	var $thisViewOffset 	= offset($thisView);
+			// 	var $scrollToPosition 	= $thisViewOffset.top - $10vh/2.5;
+			// } 
+			window.scroll({
+				top: $scrollToPosition,
+				behavior:'smooth'
+			});
 		}
 		return false;
 	});
@@ -243,7 +285,9 @@ function createNewShapes(){
 			span.parentNode.removeChild(span);
 		});
 	}
-	var $numberOfShapes = Math.floor(Math.random()*5)+1;
+	var $multiplierByWH = 5;
+	if (wh[0] < 568) {$multiplierByWH = 3;}
+	var $numberOfShapes = Math.floor(Math.random()*$multiplierByWH)+1;
 	for(i = 0; i <= $numberOfShapes; i++) {
 		$shapeAreas.forEach(function(shapeArea){
 			var $thisSpan = document.createElement('span');
@@ -292,7 +336,7 @@ const $names = [
 "Robert","Robby","Roberto","Robe",
 "Trobert","Trobby","Trobathin","Troberto","Trobe","Trizzy",
 "Trout","Bob Chuck","Trobdor","Voltorb","T-Bone","Bonecrusher", "Robbie Chaz",
-"Rabbit","Robbay","Trombone","Trobbly Wobbly"
+"Rabbit","Trobinator-3000","Trombone","Trobbly Wobbly"
 ];
 
 $names.forEach(function(name){
