@@ -289,7 +289,7 @@
 						<h3 class="header-content-divider scroll-transition red">Wordpress Showcase</h3>
 					</div>			
 					<div class="row m-0">				
-						<div class="carded-feature col-12 col-md-6 col-lg-4 scroll-transition">
+						<div class="carded-feature col-12 col-md-6 scroll-transition">
 							<div class="carded-feature-inner">
 								<a href="#"> 
 									<div class="carded-feature--image">
@@ -297,33 +297,20 @@
 									</div>
 									<div class="carded-feature--tagline">
 										<p class="tagline-subheader"></p>
-										<h5 class="tagline-header">Tagline<h5>
+										<h5 class="tagline-header">The Brooch & Bangle<h5>
 									</div>
 								</a>
 							</div>	
 						</div>
-						<div class="carded-feature col-12 col-md-6 col-lg-4 scroll-transition">
+						<div class="carded-feature col-12 col-md-6 scroll-transition">
 							<div class="carded-feature-inner">
 								<a href="#"> 
 									<div class="carded-feature--image">
-										<img src="images/content/wordpress_broochandbangle.png" alt="Wordpress Sites - Brooch and Bangle" />
+										<img src="images/content/wordpress_world-peace-yoga.png" alt="Wordpress Sites - World Peace Yoga" />
 									</div>
 									<div class="carded-feature--tagline">
 										<p class="tagline-subheader"></p>
-										<h5 class="tagline-header">Tagline<h5>
-									</div>
-								</a>
-							</div>	
-						</div>
-						<div class="carded-feature col-12 col-md-6 col-lg-4 scroll-transition">
-							<div class="carded-feature-inner">
-								<a href="#"> 
-									<div class="carded-feature--image">
-										<img src="images/content/wordpress_broochandbangle.png" alt="Wordpress Sites - Brooch and Bangle" />
-									</div>
-									<div class="carded-feature--tagline">
-										<p class="tagline-subheader"></p>
-										<h5 class="tagline-header">Tagline<h5>
+										<h5 class="tagline-header">World Peace Yoga<h5>
 									</div>
 								</a>
 							</div>	
@@ -341,30 +328,31 @@
 										<h3>Say Hi</h3>
 										<div class="contact-group col-12 nopadding">
 											<span class="sr-only">Name</span>
-											<input type="text" required />
+											<input type="text" id="inp_name" required />
 											<label class="input-label">Name</label>
 											<span class="input-after"><span>
 										</div>
 										<div class="contact-group col-12 nopadding">
 											<span class="sr-only">Email</span>	
-											<input type="email" required />
+											<input type="email" id="inp_email" required />
 											<label class="input-label">Email</label>
 											<span class="input-after"><span>
 										</div>
 										<div class="contact-group col-12 nopadding">
 											<span class="sr-only">Subject</span>									
-											<input type="text" required />
+											<input type="text" id="inp_subject" required />
 											<label class="input-label">Subject</label>
 											<span class="input-after"><span>
 										</div>		
 										<div class="contact-group col-12 nopadding">
 											<span class="sr-only">Message</span>													
-											<textarea type="text" required></textarea>
+											<textarea type="text" id="inp_body" required></textarea>
 											<label class="input-label">Message</label>
 											<span class="input-after"><span>
 										</div>	
-										<div class="contact-group col-12 ta-l">
-											<input type="submit" value="Send">		
+										<div class="contact-group col-12 ta-c">	
+											<a id="anchFakeSubmit" href="#" class="">Send (from default mail client)</a>
+											<a id="anchRealSubmit" href="mailto:trobfrank92@gmail.com" class="hidden">Send</a>
 										</div>	
 										<div class="form-loader"></div>				
 									</form>
@@ -380,9 +368,9 @@
 		<div class="d-flex flex-wrap content-section-links nopadding noborder">
 			<div class="d-none d-md-flex col-12 col-sm-4 box box-double box-text bg-red">
 				<i class="icon fas fa-code"></i>
-				<p class="ta-c">SASS, Bootstrap, jQuery, Wordpress, PWAs, Web Services, ADA, RWD, Git</p>
+				<p class="ta-c">SASS, Bootstrap, jQuery, Wordpress, PWAs, OOP, Web Services, ADA, RWD, Git</p>
 			</div>
-			<div class="col-12 col-sm-8 bg-black box-double flex-wrap d-flex nopadding">
+			<div class="col-12 col-sm-12 col-md-8 bg-black box-double flex-wrap d-flex nopadding">
 				<div class="col-12 box bg-black flex-row justify-content-around">
 					<div class="social-link-holder nopadding col-3 ta-r">
 						<a class="social-link" href="https://codepen.io/trobfrank/" target="_blank"><i class="icon fab fa-codepen"></i></a>
@@ -395,8 +383,11 @@
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 box box-text bg-purple">
-					<a class="social-link" href="asset/Robert-Frank_Resume.pdf" target="_blank">
-						<i class="icon fas fa-file-alt"></i>
+					<a class="social-link" href="assets/Robert_Frank_Resume.pdf" target="_blank">
+						<span class="fa-stack fa-2x">
+						  <i class="parent fas fa-file fa-stack-2x"></i>
+						  <i class="child fas fa-download fa-stack-1x"></i>
+						</span>
 						<p>download resume</p>
 					</a>
 				</div>

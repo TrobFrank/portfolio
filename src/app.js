@@ -119,9 +119,18 @@ window.addEventListener('scroll', function(e) {
 
 var $form 		= document.getElementById('form-contact');
 var $formItems 	= document.querySelectorAll('.contact-group input, .contact-group textarea');
-var $inpSubmit 	= document.querySelector('.contact-group input[type=submit]');
+//var $inpSubmit 	= document.querySelector('.contact-group input[type=submit]');
 var $formMsg	= document.querySelector('.form-message');
 var $formLoader	= document.querySelector('.form-loader');
+
+/* contact fields*/
+var $inp_email 			= document.getElementById('inp_email');
+var $inp_name 			= document.getElementById('inp_name');
+var $inp_subject 		= document.getElementById('inp_subject');
+var $inp_body 			= document.getElementById('inp_body');
+var $inp_fake_submit 	= document.getElementById('anchFakeSubmit');
+var $inp_real_submit 	= document.getElementById('anchRealSubmit');
+
 
 /* Moving Labels Per Input */
 $formItems.forEach(function($formItem){
@@ -135,34 +144,23 @@ $formItems.forEach(function($formItem){
 	});
 });
 
-/* Ajax posting to form with jQuery because it's easier :) */
+$inp_fake_submit.addEventListener('click', function(e){
+	e.preventDefault();
+	var $email 		= $inp_email.value;
+	var $name 		= $inp_name.value;
+	var $subject 	= $inp_subject.value;
+	var $body 		= $inp_body.value;
+
+	$inp_real_submit.href = 'mailto:trobfrank92@gmail.com';
+	if ($subject)		{$inp_real_submit.href += '?subject='+$subject;}
+	if ($name && email) {$inp_real_submit.href += ' from ' + $name + '('+$email+')';}
+	if ($body) 			{$inp_real_submit.href += '&body='+$body;}
+	$inp_real_submit.click();
+})
+
+
 $(document).ready(function(){
-	$form.addEventListener('submit',function(event){
-		var $dataToSend = [];
-		var $stopProcessing = false;
-		$formItems.forEach(function($formItem){
-			if ($formItem.value.length == 0) {
-				event.preventDefault();
-				$formMsg.innerHTML = "Please fill out all of the fields!";
-				var $stopProcessing = true;
-			}
-			$dataToSend.push($formItem.value);
-		});
-		if (!$stopProcessing) {
-			var $url 	= "src/submit.php";
-			var $dataToExplode = $dataToSend.join('||');
-			$.post($url, {
-				data: $dataToExplode
-			}).done(function(data){
-				$formMsg.innerHTML = "Thanks for your message! I'll be in touch as soon as I can.";
-			    alert("Data Loaded: " + data);
-			    $form.reset();
-			});			
-		}
-
-	});//submit
-
-	//also using https://kenwheeler.github.io/slick/
+	//using https://kenwheeler.github.io/slick/
 	$('.slick-slider').each(function(){
 		$(this).slick({
 		  dots: true,

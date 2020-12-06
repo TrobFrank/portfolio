@@ -707,6 +707,9 @@ main {
   font-family: "IBM Plex Sans", sans-serif;
   color: white;
   display: block;
+  left: 0;
+  width: 100%;
+  padding: 0 15%;
   bottom: 0;
   opacity: 0;
   margin: 0;
@@ -741,6 +744,14 @@ main {
   display: inline-block;
   padding: 0;
   text-align: center;
+}
+
+.fa-stack .parent {
+  color: white;
+}
+.fa-stack .child {
+  font-size: 0.8em;
+  color: #280014;
 }
 
 .bg-blue {
@@ -847,27 +858,27 @@ footer {
 }
 
 .shape-area > span:nth-child(1) {
-  transform: rotate(103deg);
+  transform: rotate(220deg);
 }
 
 .shape-area > span:nth-child(2) {
-  transform: rotate(74deg);
+  transform: rotate(13deg);
 }
 
 .shape-area > span:nth-child(3) {
-  transform: rotate(185deg);
+  transform: rotate(102deg);
 }
 
 .shape-area > span:nth-child(4) {
-  transform: rotate(137deg);
+  transform: rotate(120deg);
 }
 
 .shape-area > span:nth-child(5) {
-  transform: rotate(63deg);
+  transform: rotate(217deg);
 }
 
 .shape-area > span:nth-child(6) {
-  transform: rotate(13deg);
+  transform: rotate(17deg);
 }
 
 .shape-area > span.triangle,
@@ -914,7 +925,6 @@ footer {
   bottom: auto;
   text-align: center;
   z-index: 100;
-  transition: all 0.05s linear;
 }
 .hero-inner > * {
   display: inline-block;
@@ -986,6 +996,7 @@ form > h3 {
   left: 12px;
   font-size: 15px;
   z-index: 0;
+  pointer-events: none;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -1039,19 +1050,37 @@ form > h3 {
   font-size: 13px;
 }
 
-input[type=submit] {
-  display: block;
-  font: "IBM Plex Sans", sans-serif;
+#anchFakeSubmit {
+  display: inline-block;
+  font-family: "IBM Plex Sans", sans-serif;
   margin: auto;
   width: auto;
   height: auto;
   border: none;
   text-align: center;
-  padding: 10px 50px;
+  padding: 10px 45px;
   background: #13000a;
   color: white;
   line-height: 1.5;
   text-indent: 0;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+#anchFakeSubmit:hover {
+  text-decoration: none;
+  background: #ff8d0c;
+  color: white;
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
 }
 
 textarea,
@@ -1121,6 +1150,12 @@ button {
     top: 50%;
     transform: translateY(-50%);
     margin-top: -80px;
+  }
+}
+@media (max-width: 1199px) {
+  .box-text p {
+    opacity: 1;
+    bottom: 20%;
   }
 }
 @media (max-width: 567px) {

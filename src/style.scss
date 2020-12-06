@@ -727,6 +727,9 @@ main {
         font-family:$sansSerif;
         color:$truewhite;
         display:block;
+        left:0;
+        width:100%;
+        padding:0 15%;
         bottom:0;
         opacity:0;
         margin:0;
@@ -758,6 +761,16 @@ main {
     display:inline-block;
     padding:0;
     text-align:center;
+}
+
+.fa-stack {
+    .parent {
+        color:$truewhite;
+    }
+    .child {
+        font-size:0.8em;
+        color:$purple;
+    }
 }
 
 .bg-blue        {background:$blue;}
@@ -883,7 +896,6 @@ $shapeWidth: 40px;
     bottom:auto;
     text-align:center;
     z-index:100;
-    transition:all .05s linear;
 
     > * {
         display:inline-block;
@@ -955,6 +967,7 @@ form > h3 {
         left:12px;
         font-size:15px;
         z-index:0;
+        pointer-events:none;
         @include transition(0.2s);
     }
 
@@ -1008,19 +1021,33 @@ form > h3 {
 
 }
 
-input[type=submit] {
-    display:block;
-    font:$sansSerif;
+#anchFakeSubmit {
+    display:inline-block;
+    font-family:$sansSerif;
     margin:auto;
     width:auto;
     height:auto;
     border:none;
     text-align:center;
-    padding:10px 50px;
+    padding:10px 45px;
     background:$black;
     color:$truewhite;
     line-height:1.5;
     text-indent:0;
+    @include transition(.2s);
+    &:hover {
+        text-decoration:none;
+        background:$lightorange;
+        color:$truewhite;
+    }
+}
+
+.hidden {
+    position:absolute;
+    visibility:hidden;
+    height:0px;
+    width:0px;
+    opacity:0;
 }
 
 textarea,
@@ -1129,12 +1156,24 @@ $logoInt: 8px;
 
 }
 
+@media (max-width:1199px) {
+    .box-text {
+        p {
+            opacity:1;
+            bottom:20%;
+        }
+    }
+}
+
 @media (min-width:1024px) and (max-width:1199px) {
     
 }
 
+@media (min-width:992px) and (max-width:1023px) {
+    
+}
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:768px) and (max-width:991px) {
     
 }
 
