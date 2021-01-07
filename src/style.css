@@ -546,8 +546,12 @@ main {
   clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
 }
 
-.image-container-bio {
+.image-container.image-container-bio {
   background-image: url(../images/content/trobfrank-cincinnati-portrait.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  margin-top: 0;
 }
 
 .name-selector-view {
@@ -858,27 +862,27 @@ footer {
 }
 
 .shape-area > span:nth-child(1) {
-  transform: rotate(220deg);
+  transform: rotate(12deg);
 }
 
 .shape-area > span:nth-child(2) {
-  transform: rotate(13deg);
+  transform: rotate(51deg);
 }
 
 .shape-area > span:nth-child(3) {
-  transform: rotate(102deg);
+  transform: rotate(52deg);
 }
 
 .shape-area > span:nth-child(4) {
-  transform: rotate(120deg);
+  transform: rotate(57deg);
 }
 
 .shape-area > span:nth-child(5) {
-  transform: rotate(217deg);
+  transform: rotate(89deg);
 }
 
 .shape-area > span:nth-child(6) {
-  transform: rotate(17deg);
+  transform: rotate(160deg);
 }
 
 .shape-area > span.triangle,
@@ -1108,6 +1112,45 @@ button {
   max-height: 100%;
 }
 
+/* //wp showcase //wordpress */
+.carded-feature-inner {
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.carded-feature-inner a,
+.carded-feature-inner a:hover, .carded-feature-inner:hover a {
+  text-decoration: none;
+}
+.carded-feature-inner .carded-feature--tagline {
+  position: relative;
+  z-index: 20;
+  padding: 30px;
+  border-top: 4px solid #00263a;
+  color: #13000a;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.25);
+}
+.carded-feature-inner .carded-feature--tagline:hover {
+  color: #00263a;
+}
+.carded-feature-inner .carded-feature--tagline .icon {
+  font-size: 0.7em;
+}
+.carded-feature-inner .carded-feature--image {
+  position: relative;
+  z-index: 10;
+  filter: brightness(0.95);
+}
+
 /* //navigation //header //resize //vars */
 .content-section-links {
   height: 100%;
@@ -1156,6 +1199,30 @@ button {
   .box-text p {
     opacity: 1;
     bottom: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .bg-divider h3,
+.container-header h3 {
+    font-size: 32px;
+  }
+
+  .image-container img {
+    width: auto;
+    max-width: 100%;
+    padding: 15px 30px;
+  }
+  .image-container.float-left, .image-container.float-right {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+  .image-container.float-left .image-after, .image-container.float-right .image-after {
+    height: 50%;
+    width: 100%;
+    top: 25%;
+    left: auto;
+    right: auto;
   }
 }
 @media (max-width: 567px) {

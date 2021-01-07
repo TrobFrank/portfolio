@@ -35,9 +35,6 @@
 				<h2>Web Developer based in Cincinnati</h2>
 				<h3>HTML, CSS, JAVASCRIPT, PHP, SQL, & More</h3>			
 			</div>
-			<a data-view-id="0" class="anchNav anchNav-social social active opacity-0 hidden" href="#">
-				<i class="fas fa-share-alt"></i>
-			</a>
 			<div class="hero-filter"></div>
 		</div>
 		<div class="page-content">
@@ -46,16 +43,16 @@
 				<section data-view-id="1" class="content-section content-slide inactive opacity-0">
 					<div class="container first">
 						<div class="container-body d-flex flex-wrap">
-							<div class="content-bio col-12 col-md-7 scroll-transition">
+							<div class="content-bio col-12 col-lg-7 scroll-transition">
 								<div class="name-selector-view"></div>
 								<h3>Hi, I’m Rob.</h3>
-								<h4>Also known as 
+								<h4 class="d-none d-lg-inline">Also known as 
 									<a class="anch-name-selector d-none d-lg-inline" href="#">Trob</a>
 									<span class="d-inline d-lg-none">Trob</span>
 									<span class="dot">.</span>
 								</h4>	
 								<h4 class="pr-3">I'm a developer & designer interested in making great products.</h4>		
-								<div class="col-12 d-block d-md-none image-container image-container-mobile scroll-transition">
+								<div class="col-12 d-block d-lg-none image-container image-container-mobile scroll-transition">
 									<img class="content-img" src="images/content/trobfrank-cincinnati-portrait.jpg" alt="Rob Frank (trobfrank) - Cincinnati Web Developer"/>
 								</div>
 								<p>Since graduating from <a href="#">Electronic Media Production at CCM</a> (2014),
@@ -69,17 +66,18 @@
 								    <li>hanging with my wife <a href="#">(Claire)</a> & our two cats</li>
 								</ul>									
 							</div>
-							<div class="image-container image-container-bio image-container-fixed d-none d-md-block col-md-5 scroll-transition"></div>
+							<div class="image-container image-container-bio d-none d-lg-block col-lg-5 scroll-transition"></div>
 						</div><!--container-body-->
 					</div><!--container-->
 				</section>
 				<section data-view-id="2" class="content-section content-slide work inactive opacity-0">				
 					<div class="work-header ta-c">
+						<div id="anch_products"></div>
 						<div class="container-body container d-flex align-items-center justify-content-end">
 							<div class="category-index">
-								<a href="#">Products</a>|	<!-- school app, athletics app, 5.5 model, responsive ecomm, lesser bilby -->
-								<a href="#">Wordpress</a>| 	<!-- wpy, clifton business association, brooch and bangle -->
-								<a href="#">Misc. Design</a> <!-- content from current website (graphics), low poly projects, anything PS or AI -->
+								<a href="#anch_products">Products</a>|	<!-- school app, athletics app, 5.5 model, responsive ecomm, lesser bilby -->
+								<a href="#anch_wordpress">Wordpress</a> <!-- wpy, clifton business association, brooch and bangle -->
+								<!-- <a href="#">Misc. Design</a> --> <!-- content from current website (graphics), low poly projects, anything PS or AI -->
 							</div>
 						</div>
 					</div>	
@@ -218,12 +216,12 @@
 							<h4 class="header-credit"><label>Product of</label> <a href="https://www.legendwebworks.com/">Legend Web Works</a></h4>
 						</div><!--container-header-->					
 						<div class="container-body scroll-transition">
-							<div class="image-container col-12 col-lg-4 padding-left-15 float-right image-translate">
+							<div class="image-container col-12 col-md-4 padding-left-15 float-right image-translate">
 								<img class="d-block" src="images/content/ecommerce-screenshot.png"/>
 								<!-- <img class="d-none d-xl-block" src="images/content/lebanon.gif"/> -->
 								<div class="image-after"></div>
 							</div><!--image-container-->
-							<div class="content-container col-12 col-lg-8 d-block nopadding">
+							<div class="content-container col-12 col-md-8 d-block nopadding">
 								<h4>What was my role?</h4>
 								<p>This ecommerce module was originally developed within a non-responsive front end. In 2018, I was tasked to take all of the existing functionality and make it responsive. By doing research on what top ecommerce companies were doing, I was able to create an intuitive, modern, and familiar ecommerce experience.</p>
 								<h4>Updated Features Include:</h4>
@@ -283,39 +281,40 @@
 							</div><!--content-container-->					
 						</div><!--container-body-->													
 					</div><!--container-->					
-					<div class="clearfix"></div>	
+					<div class="clearfix"></div>		
+					<div id="anch_wordpress"></div>	
 					<div class="page-content-divider bg-divider bg-divider-about">
 						<div class="shape-area absolute clearfix"></div>
 						<h3 class="header-content-divider scroll-transition red">Wordpress Showcase</h3>
 					</div>			
-					<div class="row m-0">				
-						<div class="carded-feature col-12 col-md-6 scroll-transition">
+					<div class="row m-0">		
+						<div class="carded-feature col-12 col-md-6 offset-xl-1 col-xl-5 scroll-transition">
 							<div class="carded-feature-inner">
-								<a href="#"> 
+								<a href="https://thebroochandbangle.com/" target="_blank"> 
+									<div class="carded-feature--tagline">
+										<!-- <p class="tagline-subheader"></p> -->
+										<h5 class="tagline-header m-0">The Brooch & Bangle <i class="icon fas fa-external-link-alt"></i><h5>
+									</div>									
 									<div class="carded-feature--image">
 										<img src="images/content/wordpress_broochandbangle.png" alt="Wordpress Sites - Brooch and Bangle" />
-									</div>
-									<div class="carded-feature--tagline">
-										<p class="tagline-subheader"></p>
-										<h5 class="tagline-header">The Brooch & Bangle<h5>
 									</div>
 								</a>
 							</div>	
 						</div>
-						<div class="carded-feature col-12 col-md-6 scroll-transition">
+						<div class="carded-feature col-12 col-md-6 col-xl-5 scroll-transition">
 							<div class="carded-feature-inner">
-								<a href="#"> 
+								<a href="https://www.worldpeaceyoga.com/" target="_blank"> 
+									<div class="carded-feature--tagline">
+										<!-- <p class="tagline-subheader"></p> -->
+										<h5 class="tagline-header m-0">World Peace Yoga <i class="icon fas fa-external-link-alt"></i><h5>
+									</div>									
 									<div class="carded-feature--image">
 										<img src="images/content/wordpress_world-peace-yoga.png" alt="Wordpress Sites - World Peace Yoga" />
 									</div>
-									<div class="carded-feature--tagline">
-										<p class="tagline-subheader"></p>
-										<h5 class="tagline-header">World Peace Yoga<h5>
-									</div>
 								</a>
 							</div>	
-						</div>												
-					</div><!--container-->							
+						</div>											
+					</div><!--row-->					
 					<div class="clearfix"></div>										
 				</section>
 				<section data-view-id="3" class="content-section content-slide inactive opacity-0">

@@ -78,6 +78,8 @@ var $heroFilterOffset 		= offset($heroFilter);
 var $posBeginFilterTranform = $heroFilterOffset.top - $33vh;
 
 
+
+
 window.addEventListener('scroll', function(e) {
 	var $scrollY = $body.scrollTop;
 	var $scrollX = $body.scrollLeft;
@@ -153,7 +155,7 @@ $inp_fake_submit.addEventListener('click', function(e){
 
 	$inp_real_submit.href = 'mailto:trobfrank92@gmail.com';
 	if ($subject)		{$inp_real_submit.href += '?subject='+$subject;}
-	if ($name && email) {$inp_real_submit.href += ' from ' + $name + '('+$email+')';}
+	if ($name && $email) {$inp_real_submit.href += ' from ' + $name + '('+$email+')';}
 	if ($body) 			{$inp_real_submit.href += '&body='+$body;}
 	$inp_real_submit.click();
 })
@@ -239,6 +241,25 @@ $mainNavLinks.forEach(function($navItem){
 		return false;
 	});
 });
+
+var $categoryLinks = document.querySelectorAll('.category-index a');
+if ($categoryLinks) {
+	$categoryLinks.forEach(function($navItem){
+		$navItem.addEventListener('click',function(e){
+			e.preventDefault();
+			var $destinationToScroll 	= $navItem.href;
+			var $elementToScrollTo  	= document.getElementById($destinationToScroll.split('#')[1]);
+			setTimeout(function(){
+				window.scroll({
+					top: $elementToScrollTo.getBoundingClientRect().top,
+					behavior:'smooth'
+				});						
+			},200)
+	
+		});
+	});
+}
+
 
 /* Hero section mouse detection */
 $heroArea.addEventListener('mousemove',function(e){
